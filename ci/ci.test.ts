@@ -19,56 +19,56 @@ const pages = await browser.pages();
 const page = pages[0];
 
 const cases = [
-	{
-		framework: "simple-standalone",
-		env: "development",
-		file: "handler.ts",
-	},
-
-	{ framework: "simple-standalone", env: "production", file: "handler.ts" },
-
-	{ framework: "express", env: "development", file: "routes/home.ts" },
-	{ framework: "express", env: "production", file: "routes/home.ts" },
-
+	// {
+	// 	framework: "simple-standalone",
+	// 	env: "development",
+	// 	file: "handler.ts",
+	// },
+	//
+	// { framework: "simple-standalone", env: "production", file: "handler.ts" },
+	//
+	// { framework: "express", env: "development", file: "routes/home.ts" },
+	// { framework: "express", env: "production", file: "routes/home.ts" },
+	//
 	{ framework: "fastify", env: "development", file: "routes/home.ts" },
 	{ framework: "fastify", env: "production", file: "routes/home.ts" },
-
-	{ framework: "koa", env: "development", file: "routes/home.ts" },
-	{ framework: "koa", env: "production", file: "routes/home.ts" },
-
-	{ framework: "hapi", env: "development", file: "routes/home.ts" },
-	{ framework: "hapi", env: "production", file: "routes/home.ts" },
-
-	{
-		framework: "ssr-react-express",
-		env: "development",
-		file: "pages/Home.tsx",
-	},
-	{
-		framework: "ssr-react-express",
-		env: "production",
-		file: "pages/Home.tsx",
-	},
-	{
-		framework: "ssr-vue-express",
-		env: "development",
-		file: "pages/Home.vue",
-	},
-	{
-		framework: "ssr-vue-express",
-		env: "production",
-		file: "pages/Home.vue",
-	},
-	{
-		framework: "vite-plugin-ssr",
-		env: "development",
-		file: "pages/index/index.page.tsx",
-	},
-	{
-		framework: "vite-plugin-ssr",
-		env: "production",
-		file: "pages/index/index.page.tsx",
-	},
+	//
+	// { framework: "koa", env: "development", file: "routes/home.ts" },
+	// { framework: "koa", env: "production", file: "routes/home.ts" },
+	//
+	// { framework: "hapi", env: "development", file: "routes/home.ts" },
+	// { framework: "hapi", env: "production", file: "routes/home.ts" },
+	//
+	// {
+	// 	framework: "ssr-react-express",
+	// 	env: "development",
+	// 	file: "pages/Home.tsx",
+	// },
+	// {
+	// 	framework: "ssr-react-express",
+	// 	env: "production",
+	// 	file: "pages/Home.tsx",
+	// },
+	// {
+	// 	framework: "ssr-vue-express",
+	// 	env: "development",
+	// 	file: "pages/Home.vue",
+	// },
+	// {
+	// 	framework: "ssr-vue-express",
+	// 	env: "production",
+	// 	file: "pages/Home.vue",
+	// },
+	// {
+	// 	framework: "vite-plugin-ssr",
+	// 	env: "development",
+	// 	file: "pages/index/index.page.tsx",
+	// },
+	// {
+	// 	framework: "vite-plugin-ssr",
+	// 	env: "production",
+	// 	file: "pages/index/index.page.tsx",
+	// },
 ] as const;
 
 describe.each(cases)("$framework - $env", ({ framework, env, file }) => {
